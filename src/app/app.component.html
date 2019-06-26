@@ -1,4 +1,4 @@
-<div style="text-align:left;width:500px;">
+<div style="text-align:right;width:600px;">
   <h1>
       {{ title }}!
   </h1>
@@ -7,15 +7,24 @@
       <!-- ADD HEADERS -->
       <tr>
           <th>ID</th>
-              <th>Name of patient</th>
-                  <th>Type of patient</th>
+          <th>Name of patient</th>
+          <th>Gender</th>
+          <th>Birthdate</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>BMI</th>
       </tr>
 
       <!-- BIND ARRAY TO TABLE -->
+      <!-- With the statement “let patient of resultArr” we are defining a variable “patient”, that holds a reference to the current array element. -->
       <tr *ngFor="let patient of resultArr">
           <td>{{patient.id}}</td>
-              <td>{{patient.name}}</td>
-                  <td>{{patient.gender}}</td>
+          <td>{{patient.name}}</td>
+          <td>{{patient.gender}}</td>
+          <td>{{patient.birthDate}}</td>
+          <td>{{patient.heightCm}} cm</td>
+          <td>{{patient.weightKg}} Kg</td>
+          <td>{{patient.bmi}}</td>
       </tr>
   </table>
 </div>

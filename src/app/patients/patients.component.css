@@ -25,14 +25,14 @@
   }
 ] */
 
-.sleeping {background-color: rgb(255, 170, 42, 0.10);}
+.sleeping {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.08) 70%, white);}
 
-.stationary-awake {background-color: rgb(255, 170, 42, 0.20);}
+.stationary-awake {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.20) 70%, white);}
 
-.walking {background-color: rgb(255, 170, 42, 0.30);}
+.walking {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.30) 70%, white);}
 
-.cycling {background-color: rgb(255, 170, 42, 0.50);}
+.cycling {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.50) 70%, white);}
 
-.swimming {background-color: rgb(255, 170, 42, 0.70);}
+.swimming {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.70) 70%, white);}
 
-.running {background-color: rgb(255, 170, 42, 0.9);}
+.running {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.9) 70%, white);}

@@ -27,9 +27,9 @@ export class PatientsComponent implements OnInit {
 
   convertMinutes(dataArr) {
     dataArr.forEach(element => {
-      element.minutesraw = element.minutes / 2;
+      element.minutesraw = element.minutes / 10;
       element.minutes = this.convertActivity(element.minutes)
-      console.log(element.minutesraw)
+      // console.log(element.minutesraw)
     });
   }
 

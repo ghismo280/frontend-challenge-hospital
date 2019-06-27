@@ -1,4 +1,4 @@
-<h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Activity</h1>
+<h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Patient Activity</h1>
 <div class="album py-5 bg-light">
   <div class="container">
       <a style="margin-bottom: 15px" class="btn btn-secondary" [routerLink]="['/']" role="button">Back</a>
@@ -28,7 +28,7 @@
                     
                   </tr>
                   <tr style="border: 1px solid black;" *ngFor="let activity of resultArr">
-                    <td class="{{activity.activity}}" style="text-transform: capitalize; padding-left: 5px">{{activity.activity}}</td>
+                    <td class="{{activity.activity}}" style="text-transform: capitalize; padding-left: 5px; width: 35%;">{{activity.activity}}</td>
                     <td>{{activity.minutes}} <div class="{{activity.activity}}-bar" style='height: 25px;;'[style.width.%]=activity.minutesraw></div></td>
                     
                   </tr>

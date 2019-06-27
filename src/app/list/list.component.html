@@ -1,4 +1,4 @@
-<h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Patients</h1>
+<h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Patients List</h1>
 
 <div class="album py-5 bg-light">
   <div class="container">
@@ -19,8 +19,8 @@
               <p><b>BMI:</b> {{patient.bmi}}</p>
             </div>
             <div class="d-flex justify-content-between align-items-center">
-              <small class="text-muted">one minute ago</small>
-              <a class="btn btn-primary" [routerLink]="['/patient', patient.id]" role="button">View</a>
+              <small></small>
+              <a class="btn btn-primary btn-lg" [routerLink]="['/patient', patient.id]" role="button">View</a>
             </div>
           </div>
         </div>

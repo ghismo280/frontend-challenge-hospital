@@ -20,9 +20,18 @@ export class PatientsComponent implements OnInit {
   path = '../../assets/mock-api-data/patients/' + this.arg + '/summary.json';
 
   convertActivity(minutes) {
+    // console.log(minutes);
     this.realmin = minutes % 60;
     this.hours = Math.floor(minutes / 60);
-    return minutes < 60 ? minutes + " min" : this.hours + " h and " + this.realmin + " min";
+    if (minutes < 60) {
+      return minutes + " min"
+    }
+    else if (this.realmin === 0 && this.hours !== 0) {
+      return this.hours + " h"
+    }
+    else {
+      return this.hours + " h and " + this.realmin + " min"
+    }
   };
 
   convertMinutes(dataArr) {

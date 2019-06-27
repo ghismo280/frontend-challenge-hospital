@@ -1,1 +1,15 @@
-<p>patients works!</p>
+<h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Activity</h1>
+
+
+<table *ngIf="resultArr">
+        <tr>
+            <th>Activity</th>
+            <th>Minutes</th>
+
+        </tr>
+          <tr *ngFor="let activity of resultArr">
+            <td>{{activity.activity}}</td>
+            <td>{{activity.minutes}}</td>
+
+        </tr>
+        </table>

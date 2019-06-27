@@ -23,9 +23,4 @@ export class ListComponent implements OnInit {
       }
     );
   }
-
-  onSelect(patient) {
-    console.log("ciao")
-  }
-
 }

@@ -28,15 +28,20 @@
                     
                   </tr>
                   <tr style="border: 1px solid black;" *ngFor="let activity of resultArr">
-                    <td class="{{activity.activity}}" style="text-transform: capitalize; padding-left: 5px; width: 35%;">{{activity.activity}}</td>
-                    <td>{{activity.minutes}} <div class="{{activity.activity}}-bar" style='height: 25px;;'[style.width.%]=activity.minutesraw></div></td>
+                    <td class="{{activity.activity}}" style="text-align: center; text-transform: capitalize; padding-left: 5px; padding-top: 8px; width: 35%;"><b>{{activity.activity}}</b></td>
+                    <td style="padding-top: 8px;">{{activity.minutes}} <div class="{{activity.activity}}-bar"
+                    style='height: 25px;
+                          margin-top:5px;
+                          border-radius: 3px;
+                          box-shadow: #00000036 2px 2px 4px 0px;
+                          margin-bottom: 3px;'[style.width.%]=activity.minutesraw></div></td>
                     
                   </tr>
                 </table>  
               </div>
             </div>
           </div>
-          <a style="width: 30%; margin: 0 auto;" class="btn btn-secondary" [routerLink]="['/']" role="button">Back</a>
+          <a style="width: 30%; margin: 0 auto;" class="btn btn-outline-secondary" [routerLink]="['/']" role="button">Back</a>
         </div>
       </div>
     </div>

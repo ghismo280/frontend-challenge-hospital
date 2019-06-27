@@ -32,14 +32,14 @@ export class PatientsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.path);
+    // console.log(this.path);
     this.httpService.get(this.path).subscribe(
       data => {
         this.resultArr = data as string [];	 // FILL THE ARRAY WITH DATA.
         this.convertMinutes(this.resultArr);
-          console.log(this.resultArr[0]);
-          console.log(this.resultArr[1]);
-          console.log(this.resultArr[2]);
+          // console.log(this.resultArr[0]);
+          // console.log(this.resultArr[1]);
+          // console.log(this.resultArr[2]);
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
@@ -50,9 +50,9 @@ export class PatientsComponent implements OnInit {
       data => {
         this.resultArrGeneral = data as string []; // FILL THE ARRAY WITH DATA.
         this.patient = this.resultArrGeneral[this.arg - 1];
-          console.log(this.resultArrGeneral[0]);
-          console.log(this.resultArrGeneral[1]);
-          console.log(this.resultArrGeneral[2]);
+          // console.log(this.resultArrGeneral[0]);
+          // console.log(this.resultArrGeneral[1]);
+          // console.log(this.resultArrGeneral[2]);
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);

@@ -11,16 +11,32 @@ import { ActivatedRoute } from '@angular/router';
 export class PatientsComponent implements OnInit {
   constructor (private httpService: HttpClient, private route: ActivatedRoute) { }
   resultArr: string [];
+  realmin: number;
+  hours: number;
   arg = this.route.snapshot.params.id;
   path = '../../assets/mock-api-data/patients/' + this.arg + '/summary.json';
 
+  convertActivity(minutes) {
+    this.realmin = minutes % 60;
+    this.hours = Math.floor(minutes / 60);
+    return minutes < 60 ? minutes + " min" : this.hours + " h and " + this.realmin + " min";
+  };
+
+  convertMinutes(dataArr) {
+    dataArr.forEach(element => {
+      element.minutes = this.convertActivity(element.minutes)
+    });
+  }
 
   ngOnInit() {
     console.log(this.path);
     this.httpService.get(this.path).subscribe(
       data => {
         this.resultArr = data as string [];	 // FILL THE ARRAY WITH DATA.
-        //  console.log(this.resultArr[1]);
+        this.convertMinutes(this.resultArr);
+          console.log(this.resultArr[0]);
+          console.log(this.resultArr[1]);
+          console.log(this.resultArr[2]);
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);

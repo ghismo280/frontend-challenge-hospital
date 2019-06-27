@@ -1,15 +1,53 @@
 <h1 style="text-align: center; margin-top: 25px; margin-bottom: 25px">Activity</h1>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-12 shadow-sm">
+          <img src="../assets/{{patient.gender}}.jpg" class="bd-placeholder-img card-img-top" style="width: 225px; margin: 0 auto; height:225px;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div class="card-text">
+                <p><b>ID:</b> {{patient.id}}</p>
+                <p><b>Name:</b> {{patient.name}}</p>
+                <p><b>Gender:</b> {{patient.gender}}</p>
+                <p><b>Birthdate:</b> {{patient.birthDate}}</p>
+                <p><b>Height:</b> {{patient.heightCm}} cm</p>
+                <p><b>Weight:</b> {{patient.weightKg}} Kg</p>
+                <p><b>BMI:</b> {{patient.bmi}}</p>
+              </div>
+              <div>
+                <table *ngIf="resultArr">
+                  <tr>
+                    <th>Activity</th>
+                    <th>Minutes</th>
+                    
+                  </tr>
+                  <tr *ngFor="let activity of resultArr">
+                    <td>{{activity.activity}}</td>
+                    <td>{{activity.minutes}}</td>
+                    
+                  </tr>
+                </table>  
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-secondary" [routerLink]="['/']" role="button">Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<table *ngIf="resultArr">
-        <tr>
-            <th>Activity</th>
-            <th>Minutes</th>
-
-        </tr>
-          <tr *ngFor="let activity of resultArr">
-            <td>{{activity.activity}}</td>
-            <td>{{activity.minutes}}</td>
-
-        </tr>
-        </table>
+<!-- <table *ngIf="resultArr">
+  <tr>
+    <th>Activity</th>
+    <th>Minutes</th>
+    
+  </tr>
+  <tr *ngFor="let activity of resultArr">
+    <td>{{activity.activity}}</td>
+    <td>{{activity.minutes}}</td>
+    
+  </tr>
+</table> -->

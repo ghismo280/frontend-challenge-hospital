@@ -11,8 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class PatientsComponent implements OnInit {
   constructor (private httpService: HttpClient, private route: ActivatedRoute) { }
   resultArr: string [];
+  resultArrGeneral: string [];
+  resultArrSpecific: string [];
   realmin: number;
   hours: number;
+  patient: string ;
   arg = this.route.snapshot.params.id;
   path = '../../assets/mock-api-data/patients/' + this.arg + '/summary.json';
 
@@ -37,6 +40,19 @@ export class PatientsComponent implements OnInit {
           console.log(this.resultArr[0]);
           console.log(this.resultArr[1]);
           console.log(this.resultArr[2]);
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }    
+    );
+
+    this.httpService.get("../../assets/mock-api-data/patients.json").subscribe(
+      data => {
+        this.resultArrGeneral = data as string []; // FILL THE ARRAY WITH DATA.
+        this.patient = this.resultArrGeneral[this.arg - 1];
+          console.log(this.resultArrGeneral[0]);
+          console.log(this.resultArrGeneral[1]);
+          console.log(this.resultArrGeneral[2]);
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);

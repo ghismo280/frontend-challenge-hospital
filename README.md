@@ -47,4 +47,7 @@ Open terminal:
  git clone https://github.com/ghismo280/frontend-challenge-hospital.git<br>
  cd frontend-challenge-hospital <br>
  npm install <br>
+ ng serve <br>
  </pre>
+
+ Open http://localhost:4200 in your web browser.

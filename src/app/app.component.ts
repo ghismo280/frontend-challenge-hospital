@@ -23,4 +23,8 @@ export class AppComponent {
       }
     );
   }
+
+  onSelect(patient) {
+    console.log("ciao")
+  }
 }

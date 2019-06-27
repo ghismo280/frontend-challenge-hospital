@@ -1,0 +1,38 @@
+/* [
+  {
+    "activity": "sleeping",
+    "intensity": "none"
+  },
+  {
+    "activity": "stationary-awake",
+    "intensity": "low"
+  },
+  {
+    "activity": "walking",
+    "intensity": "moderate"
+  },
+  {
+    "activity": "cycling",
+    "intensity": "moderate"
+  },
+  {
+    "activity": "swimming",
+    "intensity": "vigorous"
+  },
+  {
+    "activity": "running",
+    "intensity": "vigorous"
+  }
+] */
+
+.sleeping {background-color: rgb(255, 170, 42, 0.10);}
+
+.stationary-awake {background-color: rgb(255, 170, 42, 0.20);}
+
+.walking {background-color: rgb(255, 170, 42, 0.30);}
+
+.cycling {background-color: rgb(255, 170, 42, 0.50);}
+
+.swimming {background-color: rgb(255, 170, 42, 0.70);}
+
+.running {background-color: rgb(255, 170, 42, 0.9);}

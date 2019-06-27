@@ -36,3 +36,18 @@
 .swimming {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.70) 70%, white);}
 
 .running {background-image: linear-gradient(to right, rgb(255, 170, 42, 0.9) 70%, white);}
+
+
+/* ------------------------------------------- */
+
+.sleeping-bar {background-color: rgb(0,0,0, 0.5)}
+
+.stationary-awake-bar {background-color: rgb(0,0,0, 0.6)}
+
+.walking-bar {background-color: rgb(0,0,0, 0.70)}
+
+.cycling-bar {background-color: rgb(0,0,0, 0.80)}
+
+.swimming-bar {background-color: rgb(0,0,0, 0.90)}
+
+.running-bar {background-color: rgb(0,0,0, 1)}
